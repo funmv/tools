@@ -1,0 +1,740 @@
+step_tags = [[] for _ in range(52)]
+
+step_tags[0] = [
+    'CCWP-01-01A-RF',
+    'CCWP-01-01B-RF',
+    'TCV-01-3710-ZT1',
+    'TIT-01-3710-SEL',
+    'MOV-01-3704A-RI',
+    'MOV-01-3704B-RI',
+    'MOV-01-3703A-OF',
+    'MOV-01-3703B-OF',
+    'ACWP-01-01A-RF',
+    'ACWP-01-01B-RF',
+    'ACWP-01-01A-AMOD',
+    'ACWP-01-01B-AMOD',
+    'ACWP-01-01A-RDY',
+    'ACWP-01-01B-RDY',
+    'MOV-01-3702A-RDY',
+    'MOV-01-3702B-RDY',
+    'MOV-01-3705-AMOD',
+    # HRSG-1 관련
+    'MOV-H1-4623-OF',
+    'MOV-H1-4623-CF',
+    'MOV-H1-4623-F',
+    'MOV-H1-4623-RP',
+    'MOV-H1-4623-AMOD',
+    'MOV-H1-4624-F',
+    'MOV-H1-4624-RP',
+    'MOV-H1-4624-ZT',
+    'MOV-H1-4624-AMOD',
+    'LIT-H1-4611-SEL',
+    'TIT-H1-4611-SEL',
+    # HRSG-2 관련
+    'MOV-H2-4623-OF',
+    'MOV-H2-4623-CF',
+    'MOV-H2-4623-F',
+    'MOV-H2-4623-RP',
+    'MOV-H2-4623-AMOD',
+    'MOV-H2-4624-F',
+    'MOV-H2-4624-RP',
+    'MOV-H2-4624-ZT',
+    'MOV-H2-4624-AMOD',
+    'LIT-H2-4611-SEL',
+    'TIT-H2-4611-SEL',
+    # HRSG-3 관련
+    'MOV-H3-4623-OF',
+    'MOV-H3-4623-CF',
+    'MOV-H3-4623-F',
+    'MOV-H3-4623-RP',
+    'MOV-H3-4623-AMOD',
+    'MOV-H3-4624-F',
+    'MOV-H3-4624-RP',
+    'MOV-H3-4624-ZT',
+    'MOV-H3-4624-AMOD',
+    'LIT-H3-4611-SEL',
+    'TIT-H3-4611-SEL'
+]
+
+step_tags[1] = [
+    'PIT-H1-4124-SEL',
+    'PIT-H2-4124-SEL',
+    'PIT-H3-4124-SEL',
+    'PIT-01-3401-SEL',
+    'TIT-01-3401-SEL'
+]
+
+step_tags[2] = [
+    'MOV-H1-4623-AMOD',
+    'MOV-H1-4624-AMOD',
+    'MOV-H2-4623-AMOD',
+    'MOV-H2-4624-AMOD',
+    'MOV-H3-4623-AMOD',
+    'MOV-H3-4624-AMOD'
+]
+
+step_tags[3] = [
+    'ACWP-01-01A-RF',
+    'ACWP-01-01B-RF',
+    'MOV-01-3713A-OF',
+    'MOV-01-3713A-CF',
+    'MOV-01-3713A-F',
+    'MOV-01-3713A-RP',
+    'MOV-01-3713A-AMOD',
+    'MOV-01-3713B-OF',
+    'MOV-01-3713B-CF',
+    'MOV-01-3713B-F',
+    'MOV-01-3713B-RP',
+    'MOV-01-3713B-AMOD',
+    'MOV-01-3714A-OF',
+    'MOV-01-3714A-CF',
+    'MOV-01-3714A-F',
+    'MOV-01-3714A-RP',
+    'MOV-01-3714A-AMOD',
+    'MOV-01-3714B-OF',
+    'MOV-01-3714B-CF',
+    'MOV-01-3714B-F',
+    'MOV-01-3714B-RP',
+    'MOV-01-3714B-AMOD',
+    'DM-H1-01-F',
+    'DM-H1-01-RP',
+    'DM-H2-01-F',
+    'DM-H2-01-RP',
+    'DM-H3-01-F',
+    'DM-H3-01-RP',
+    'ZS-H1-4002A-OF',
+    'ZS-H1-4002B-OF',
+    'ZS-H1-4002C-OF',
+    'ZS-H1-4003A-CF',
+    'ZS-H1-4003B-CF',
+    'ZS-H2-4002A-OF',
+    'ZS-H2-4002B-OF',
+    'ZS-H2-4002C-OF',
+    'ZS-H2-4003A-CF',
+    'ZS-H2-4003B-CF',
+    'ZS-H3-4002A-OF',
+    'ZS-H3-4002B-OF',
+    'ZS-H3-4002C-OF',
+    'ZS-H3-4003A-CF',
+    'ZS-H3-4003B-CF'
+]
+
+# IP 스팀 관련 태그 리스트 (태그명만)
+step_tags[4] = [
+    # PCV (압력 제어 밸브) 관련
+    'PCV-H1-4413-ZT',
+    'PCV-H2-4413-ZT',
+    'PCV-H3-4413-ZT',
+    'PCV-H1-4413-DMD',
+    'PCV-H2-4413-DMD',
+    'PCV-H3-4413-DMD',
+
+    # HRSG-1 IP 관련 MOV
+    'MOV-H1-4412-OF',
+    'MOV-H1-4412-CF',
+    'MOV-H1-4412-F',
+    'MOV-H1-4412-RP',
+    'MOV-H1-4412-AMOD',
+    'MOV-H1-4414-OF',
+    'MOV-H1-4414-CF',
+    'MOV-H1-4414-F',
+    'MOV-H1-4414-RP',
+    'MOV-H1-4414-AMOD',
+    'MOV-H1-4413-OF',
+    'MOV-H1-4413-CF',
+    'MOV-H1-4413-F',
+    'MOV-H1-4413-RP',
+    'MOV-H1-4413-AMOD',
+
+    # HRSG-2 IP 관련 MOV
+    'MOV-H2-4412-OF',
+    'MOV-H2-4412-CF',
+    'MOV-H2-4412-F',
+    'MOV-H2-4412-RP',
+    'MOV-H2-4412-AMOD',
+    'MOV-H2-4414-OF',
+    'MOV-H2-4414-CF',
+    'MOV-H2-4414-F',
+    'MOV-H2-4414-RP',
+    'MOV-H2-4414-AMOD',
+    'MOV-H2-4413-OF',
+    'MOV-H2-4413-CF',
+    'MOV-H2-4413-F',
+    'MOV-H2-4413-RP',
+    'MOV-H2-4413-AMOD',
+
+    # HRSG-3 IP 관련 MOV
+    'MOV-H3-4412-OF',
+    'MOV-H3-4412-CF',
+    'MOV-H3-4412-F',
+    'MOV-H3-4412-RP',
+    'MOV-H3-4412-AMOD',
+    'MOV-H3-4414-OF',
+    'MOV-H3-4414-CF',
+    'MOV-H3-4414-F',
+    'MOV-H3-4414-RP',
+    'MOV-H3-4414-AMOD',
+    'MOV-H3-4413-OF',
+    'MOV-H3-4413-CF',
+    'MOV-H3-4413-F',
+    'MOV-H3-4413-RP',
+    'MOV-H3-4413-AMOD'
+]
+
+# AUX Steam 및 관련 시스템 태그 리스트 (태그명만)
+step_tags[5] = [
+    # AUX Steam Header 관련
+    'PIT-01-3401-SEL',
+    'TIT-01-3401-SEL',
+
+    # MOV-3405 시리즈 (AUX STM TO ASH DRN)
+    'MOV-01-3405-OF',
+    'MOV-01-3405-CF',
+    'MOV-01-3405-F',
+    'MOV-01-3405-RP',
+    'MOV-01-3405-AMOD',
+
+    # MOV-3403 시리즈 (AUX BLR TO ASH)
+    'MOV-01-3403-OF',
+    'MOV-01-3403-CF',
+    'MOV-01-3403-F',
+    'MOV-01-3403-RP',
+    'MOV-01-3403-AMOD',
+
+    # 기타 시스템
+    'DWTP-00-0003A-RF',
+    'PIT-01-5011A',
+    'PIT-01-5011B'
+]
+
+# Flash Tank TCV 관련 태그 리스트 (태그명만)
+step_tags[6] = [
+    'TCV-01-3501-ZT',
+    'TCV-01-3501-DMD',
+    'TCV-01-3501-AUTO'
+]
+
+# 태그명만 추출한 리스트
+step_tags[7] = [
+# DWTP(Demineralized Water Treatment Plant) 관련 태그 리스트
+    'LIT-00-1111',
+    'LIT-00-1121',
+    'DWTP-00-0003A-RF',
+    'DWTP-00-0003A-F',
+    'DWTP-00-0003A-AMOD',
+    'DWTP-00-0003B-RF',
+    'DWTP-00-0003B-F',
+    'DWTP-00-0003B-AMOD',
+    'MV-00-1111-OF',
+    'MV-00-1111-CF',
+    'MV-00-1111-F',
+    'MV-00-1111-RP',
+    'MV-00-1111-AMOD',
+    'MV-00-1112-OF',
+    'MV-00-1112-CF',
+    'MV-00-1112-F',
+    'MV-00-1112-RP',
+    'MV-00-1112-AMOD',
+    'PDIS-00-1111',
+    'PDIS-00-1112'
+]
+
+# HIFP(HRSG Initial Filling Pump) 관련 태그 리스트
+step_tags[8] = [
+    'HIFP-00-0004-RF',
+    'HIFP-00-0004-F',
+    'HIFP-00-0004-AMOD',
+    'MV-00-1131-OF',
+    'MV-00-1131-CF',
+    'MV-00-1131-F',
+    'MV-00-1131-RP',
+    'MV-00-1131-AMOD',
+    'MOV-01-3608-OF',
+    'MOV-01-3608-CF',
+    'MOV-01-3608-F',
+    'MOV-01-3608-RP',
+    'MOV-01-3608-AMOD',
+    'MOV-01-3609-OF',
+    'MOV-01-3609-CF',
+    'MOV-01-3609-F',
+    'MOV-01-3609-RP',
+    'MOV-01-3609-AMOD',
+    'PIT-01-3604',
+    'PDIS-00-1131'
+]
+
+
+
+# HRSG LP Drum & COP 관련 태그 리스트
+step_tags[9] = [
+    # HRSG-1 LP Drum 관련
+    'LCV-H1-4610-ZT',
+    'LCV-H1-4610-AUTO',
+    'LCV-H1-4610-DMD',
+    'MOV-H1-4610-OF',
+    'MOV-H1-4610-CF',
+    'MOV-H1-4610-F',
+    'MOV-H1-4610-RP',
+    'MOV-H1-4610-AMOD',
+
+    # HRSG-2 LP Drum 관련
+    'LCV-H2-4610-ZT',
+    'LCV-H2-4610-AUTO',
+    'LCV-H2-4610-DMD',
+    'MOV-H2-4610-OF',
+    'MOV-H2-4610-CF',
+    'MOV-H2-4610-F',
+    'MOV-H2-4610-RP',
+    'MOV-H2-4610-AMOD',
+
+    # HRSG-3 LP Drum 관련
+    'LCV-H3-4610-ZT',
+    'LCV-H3-4610-AUTO',
+    'LCV-H3-4610-DMD',
+    'MOV-H3-4610-OF',
+    'MOV-H3-4610-CF',
+    'MOV-H3-4610-F',
+    'MOV-H3-4610-RP',
+    'MOV-H3-4610-AMOD',
+
+    # COP 공통 계측
+    'PIT-01-3603-SEL',
+    'FIT-01-3602-SEL',
+    'LIT-01-3601AX-SEL',
+    'LIT-01-3601BX-SEL',
+
+    # COP 흡입 라인 MOV
+    'MOV-01-3602A-OF',
+    'MOV-01-3602A-CF',
+    'MOV-01-3602A-F',
+    'MOV-01-3602A-RP',
+    'MOV-01-3602A-AMOD',
+    'MOV-01-3602B-OF',
+    'MOV-01-3602B-CF',
+    'MOV-01-3602B-F',
+    'MOV-01-3602B-RP',
+    'MOV-01-3602B-AMOD',
+
+    # COP 펌프 A, B, C
+    'COP-01-02A-RF',
+    'COP-01-02A-F',
+    'COP-01-02A-AMOD',
+    'COP-01-02B-RF',
+    'COP-01-02B-F',
+    'COP-01-02B-AMOD',
+    'COP-01-02C-RF',
+    'COP-01-02C-F',
+    'COP-01-02C-AMOD',
+
+    # COP 준비 상태
+    'COP-01-02A-RDY',
+    'MOV-01-3601A-RDY',
+    'SOV-01-3601A-RDY',
+    'COP-01-02B-RDY',
+    'MOV-01-3601B-RDY',
+    'SOV-01-3601B-RDY',
+    'COP-01-02C-RDY',
+    'MOV-01-3601C-RDY',
+    'SOV-01-3601C-RDY',
+
+    # COP 기계적 밀봉 SOV
+    'SOV-01-3602A-OF',
+    'SOV-01-3602A-CF',
+    'SOV-01-3602A-AMOD',
+    'SOV-01-3602A-RDY',
+    'SOV-01-3602B-OF',
+    'SOV-01-3602B-CF',
+    'SOV-01-3602B-AMOD',
+    'SOV-01-3602B-RDY',
+    'SOV-01-3602C-OF',
+    'SOV-01-3602C-CF',
+    'SOV-01-3602C-AMOD',
+    'SOV-01-3602C-RDY'
+]
+
+
+# HIFP(HRSG Initial Filling Pump) 관련 태그 리스트
+step_tags[10] = [
+    'HIFP-00-0004-RF',
+    'HIFP-00-0004-F',
+    'HIFP-00-0004-AMOD',
+    'MV-00-1131-OF',
+    'MV-00-1131-CF',
+    'MV-00-1131-F',
+    'MV-00-1131-RP',
+    'MV-00-1131-AMOD',
+    'MOV-01-3608-OF',
+    'MOV-01-3608-CF',
+    'MOV-01-3608-F',
+    'MOV-01-3608-RP',
+    'MOV-01-3608-AMOD'
+]
+
+
+# HRSG LP Drum Level Control 관련 태그 리스트
+step_tags[11] = [
+    # HRSG-1 LP Drum
+    'LCV-H1-4610-ZT',
+    'LCV-H1-4610-AUTO',
+    'LCV-H1-4610-DMD',
+
+    # HRSG-2 LP Drum
+    'LCV-H2-4610-ZT',
+    'LCV-H2-4610-AUTO',
+    'LCV-H2-4610-DMD',
+
+    # HRSG-3 LP Drum
+    'LCV-H3-4610-ZT',
+    'LCV-H3-4610-AUTO',
+    'LCV-H3-4610-DMD',
+
+    # LP Drum Level
+    'LIT-H1-4611-SEL',
+    'LIT-H2-4611-SEL',
+    'LIT-H3-4611-SEL'
+]
+
+# MCWP(Main Cooling Water Pump) & BDNP(Blowdown Pump) 관련 태그 리스트
+step_tags[12] = [
+    # MCWP-A 관련
+    'MCWP-01-01A-RF',
+    'MCWP-01-01A-F',
+    'MCWP-01-01A-AMOD',
+    'MCWP-01-01A-RDY',
+    'MOV-01-3701A-RDY',
+
+    # MCWP-B 관련
+    'MCWP-01-01B-RF',
+    'MCWP-01-01B-F',
+    'MCWP-01-01B-AMOD',
+    'MCWP-01-01B-RDY',
+    'MOV-01-3701B-RDY',
+
+    # MCWP-C 관련
+    'MCWP-01-01C-RF',
+    'MCWP-01-01C-F',
+    'MCWP-01-01C-AMOD',
+    'MCWP-01-01C-RDY',
+    'MOV-01-3701C-RDY',
+
+    # FCV(Flow Control Valve) 관련
+    'FCV-01-3701-ZT',
+    'FCV-01-3701-DMD',
+    'FCV-01-3701-AUTO',
+
+    # BDNP(Blowdown Pump) B
+    'BDNP-01-01B-RF',
+    'BDNP-01-01B-F',
+    'BDNP-01-01B-AMOD',
+    'BDNP-01-01B-RDY',
+
+    # BDNP(Blowdown Pump) A
+    'BDNP-01-01A-RF',
+    'BDNP-01-01A-F',
+    'BDNP-01-01A-AMOD',
+    'BDNP-01-01A-RDY'
+]
+
+# Step 14: Gland Seal STM 공급
+step_tags[13] = [
+    'MOV-01-3404-OF', 'MOV-01-3404-CF', 'MOV-01-3404-F', 'MOV-01-3404-RP',
+    'MOV-01-3404-AMOD', 'EH-01-3412', 'EH-01-3413', 'EH-01-3414', 'MOV-01-3410-OF',
+    'MOV-01-3410-CF', 'MOV-01-3410-F', 'MOV-01-3410-RP', 'MOV-01-3410-AMOD',
+    'MOV-01-3410-RDY', '10RCDOF202_04', '10RCDOF203_04', '10RCDOF202_03',
+    '10RCDOF203_03', '10RCAOTGSE60_01', '10R-AOSSM02_01', '10RCDOGSP22_04',
+    'EH-01-3404', 'EH-01-3405', 'EH-01-3406', 'EH-01-3407'
+]
+
+# Step 15: Vacuum Pp 2대 기동
+step_tags[14] = [
+    'VASLP-01-01A-RF', 'VASLP-01-01B-RF', 'VASLP-01-01A-F', 'VASLP-01-01A-AMOD',
+    'VASLP-01-01A-RDY', 'SWRP-01-01A-RF', 'SWRP-01-01A-F', 'SWRP-01-01A-AMOD',
+    'SWRP-01-01A-RDY', 'VASLP-01-01B-F', 'VASLP-01-01B-AMOD', 'VASLP-01-01B-RDY',
+    'SWRP-01-01B-RF', 'SWRP-01-01B-F', 'SWRP-01-01B-AMOD', 'SWRP-01-01B-RDY',
+    'PIT-01-3601-SEL', 'PT-01-3705', 'PT-01-3706', 'MOV-01-3715-OF',
+    'MOV-01-3715-CF', 'MOV-01-3715-F', 'MOV-01-3715-RP', 'MOV-01-3715-AMOD',
+    'MOV-01-3715-RDY', 'SOV-01-3703-O', 'SOV-01-3703-PF', 'HV-01-3732A-AMOD',
+    'SOV-01-3704-O', 'SOV-01-3704-PF', 'HV-01-3732B-AMOD'
+]
+
+# Step 16: Vacuum BKR Close
+step_tags[15] = [
+    '10RCDOTGOPC003_09', '10RCDOTGOPC003_10', '10RCDOTGOPC003_11'
+]
+
+# Step 17: Aux Steam 압력 조정
+step_tags[16] = [
+    'PCV-01-3411-SP', 'PIT-01-3401-SEL', 'PIT-H1-4124-SEL', 'PIT-H2-4124-SEL',
+    'PIT-H3-4124-SEL', 'PCV-01-3411-ZT', 'PCV-01-3411-DMD', 'PCV-01-3411-AUTO'
+]
+
+# Step 18: BFP AOP, BFP FC AOP 기동
+step_tags[17] = [
+    'AOP-H1-02A-RF', 'AOP-H1-02A-F', 'AOP-H1-02A-AMOD', 'AOP-H1-02A-RDY',
+    'AOP-H1-02B-RF', 'AOP-H1-02B-F', 'AOP-H1-02B-AMOD', 'AOP-H1-02B-RDY',
+    'AOP-H2-02A-RF', 'AOP-H2-02A-F', 'AOP-H2-02A-AMOD', 'AOP-H2-02A-RDY',
+    'AOP-H2-02B-RF', 'AOP-H2-02B-F', 'AOP-H2-02B-AMOD', 'AOP-H2-02B-RDY',
+    'AOP-H3-02A-RF', 'AOP-H3-02A-F', 'AOP-H3-02A-AMOD', 'AOP-H3-02A-RDY',
+    'AOP-H3-02B-RF', 'AOP-H3-02B-F', 'AOP-H3-02B-AMOD', 'AOP-H3-02B-RDY',
+    'AOP-H1-03A-RF', 'AOP-H1-03A-F', 'AOP-H3-03A-RF', 'AOP-H3-03A-F',
+    'PS-H1-3521A', 'PS-H1-3521B', 'PS-H2-3521A', 'PS-H2-3521B',
+    'PS-H3-3521A', 'PS-H3-3521B', 'PIT-H1-3542A', 'PIT-H3-3542A'
+]
+
+# Step 19: 선행호기 BFP 2대 기동
+step_tags[18] = [
+    'LCV-H1-4103-ZT', 'LCV-H1-4104-ZT', 'LCV-H1-4105-ZT', 'LCV-H1-4105-DMD',
+    'LCV-H1-4105-MAN', 'MOV-H1-4106-OF', 'MOV-H1-4106-CF', 'MOV-H1-4106-F',
+    'MOV-H1-4106-RP', 'MOV-H1-4106-AMOD', 'MOV-H1-4106-RDY', 'MOV-H1-4106-ZT',
+    'LCV-H1-4402-ZT', 'LCV-H1-4402-DMD', 'LCV-H1-4402-AUTO', 'MOV-H1-4403-OF',
+    'MOV-H1-4403-CF', 'MOV-H1-4403-F', 'MOV-H1-4403-RP', 'LCV-H2-4103-ZT',
+    'LCV-H2-4104-ZT', 'LCV-H2-4105-ZT', 'LCV-H2-4105-DMD', 'LCV-H2-4105-MAN',
+    'MOV-H2-4106-OF', 'MOV-H2-4106-CF', 'MOV-H2-4106-F', 'MOV-H2-4106-RP',
+    'MOV-H2-4106-AMOD', 'MOV-H2-4106-RDY', 'MOV-H2-4106-ZT', 'LCV-H2-4402-ZT',
+    'LCV-H2-4402-DMD', 'LCV-H2-4402-AUTO', 'MOV-H2-4403-OF', 'MOV-H2-4403-CF',
+    'MOV-H2-4403-F', 'MOV-H2-4403-RP', 'LCV-H3-4103-ZT', 'LCV-H3-4104-ZT',
+    'LCV-H3-4105-ZT', 'LCV-H3-4105-DMD', 'LCV-H3-4105-MAN', 'MOV-H3-4106-OF',
+    'MOV-H3-4106-CF', 'MOV-H3-4106-F', 'MOV-H3-4106-RP', 'MOV-H3-4106-AMOD',
+    'MOV-H3-4106-RDY', 'MOV-H3-4106-ZT', 'LCV-H3-4402-ZT', 'LCV-H3-4402-DMD',
+    'LCV-H3-4402-AUTO', 'MOV-H3-4403-OF', 'MOV-H3-4403-CF', 'MOV-H3-4403-F',
+    'MOV-H3-4403-RP', 'IT-H1-3520A', 'IT-H1-3520B', 'IT-H2-3520A',
+    'IT-H2-3520B', 'IT-H3-3520A', 'IT-H3-3520B', 'BFP-H1-01A-RF',
+    'BFP-H1-01A-F', 'BFP-H1-01A-AMOD', 'BFP-H1-01A-RDY', 'BFP-H1-01B-RF',
+    'BFP-H1-01B-F', 'BFP-H1-01B-AMOD', 'BFP-H1-01B-RDY', 'BFP-H2-01A-RF',
+    'BFP-H2-01A-F', 'BFP-H2-01A-AMOD', 'BFP-H2-01A-RDY', 'BFP-H2-01B-RF',
+    'BFP-H2-01B-F', 'BFP-H2-01B-AMOD', 'BFP-H2-01B-RDY', 'BFP-H3-01A-RF',
+    'BFP-H3-01A-F', 'BFP-H3-01A-AMOD', 'BFP-H3-01A-RDY', 'BFP-H3-01B-RF',
+    'BFP-H3-01B-F', 'BFP-H3-01B-AMOD', 'BFP-H3-01B-RDY', 'PIT-H1-3512-SEL',
+    'PIT-H1-3511', 'PIT-H2-3512-SEL', 'PIT-H2-3511', 'PIT-H3-3512-SEL',
+    'PIT-H3-3511'
+]
+
+# Step 20: 선행호기 HP, IP Drum 충수
+step_tags[19] = [
+    'LIT-H1-4107-SEL', 'LCV-H1-4105-SP1', 'LIT-H1-4405-SEL', 'LCV-H1-4402-SP1',
+    'LIT-H1-4611-SEL', 'LCV-H1-4610-SP1', 'LIT-H2-4107-SEL', 'LCV-H2-4105-SP1',
+    'LIT-H2-4405-SEL', 'LCV-H2-4402-SP1', 'LIT-H2-4611-SEL', 'LCV-H2-4610-SP1',
+    'LIT-H3-4107-SEL', 'LCV-H3-4105-SP1', 'LIT-H3-4405-SEL', 'LCV-H3-4402-SP1',
+    'LIT-H3-4611-SEL', 'LCV-H3-4610-SP1', 'PIT-H1-4107-SEL', 'PIT-H1-4405-SEL',
+    'PIT-H1-4611-SEL', 'PIT-H2-4107-SEL', 'PIT-H2-4405-SEL', 'PIT-H2-4611-SEL',
+    'PIT-H3-4107-SEL', 'PIT-H3-4405-SEL', 'PIT-H3-4611-SEL'
+]
+
+# Step 21: GT Reset
+step_tags[20] = [
+    'PIT-01-3601-SEL'
+]
+
+# Step 22: GT TCA Cooler Feed WTR 공급
+step_tags[21] = [
+    'MOV-H1-3515A-OF', 'MOV-H1-3515A-CF', 'MOV-H1-3515A-F', 'MOV-H1-3515A-RP',
+    'MOV-H1-3515A-AMOD', 'MOV-H1-3515A-RDY', 'MOV-H1-3515B-OF', 'MOV-H1-3515B-CF',
+    'MOV-H1-3515B-F', 'MOV-H1-3515B-RP', 'MOV-H1-3515B-AMOD', 'MOV-H1-3515B-RDY',
+    'TCV-H1-3511-ZT', 'TCV-H1-3511-DMD', 'TCV-H1-3511-AUTO', 'MOV-G1-3811-OF',
+    'MOV-G1-3811-CF', 'MOV-G1-3811-F', 'MOV-G1-3811-RP', 'MOV-G1-3811-AMOD',
+    'MOV-G1-3811-RDY', 'FCV-G1-3813-ZT', 'FCV-G1-3813-DMD', 'MOV-H2-3515A-OF',
+    'MOV-H2-3515A-CF', 'MOV-H2-3515A-F', 'MOV-H2-3515A-RP', 'MOV-H2-3515A-AMOD',
+    'MOV-H2-3515A-RDY', 'MOV-H2-3515B-OF', 'MOV-H2-3515B-CF', 'MOV-H2-3515B-F',
+    'MOV-H2-3515B-RP', 'MOV-H2-3515B-AMOD', 'MOV-H2-3515B-RDY', 'TCV-H2-3511-ZT',
+    'TCV-H2-3511-DMD', 'TCV-H2-3511-AUTO', 'MOV-G2-3811-OF', 'MOV-G2-3811-CF',
+    'MOV-G2-3811-F', 'MOV-G2-3811-RP', 'MOV-G2-3811-AMOD', 'MOV-G2-3811-RDY',
+    'FCV-G2-3813-ZT', 'FCV-G2-3813-DMD', 'MOV-H3-3515A-OF', 'MOV-H3-3515A-CF',
+    'MOV-H3-3515A-F', 'MOV-H3-3515A-RP', 'MOV-H3-3515A-AMOD', 'MOV-H3-3515A-RDY',
+    'MOV-H3-3515B-OF', 'MOV-H3-3515B-CF', 'MOV-H3-3515B-F', 'MOV-H3-3515B-RP',
+    'MOV-H3-3515B-AMOD', 'MOV-H3-3515B-RDY', 'TCV-H3-3511-ZT', 'TCV-H3-3511-DMD',
+    'TCV-H3-3511-AUTO', 'MOV-G3-3811-OF', 'MOV-G3-3811-CF', 'MOV-G3-3811-F',
+    'MOV-G3-3811-RP', 'MOV-G3-3811-AMOD', 'MOV-G3-3811-RDY', 'FCV-G3-3813-ZT',
+    'FCV-G3-3813-DMD'
+]
+
+# Step 23: 후행호기 BFP 기동
+step_tags[22] = []  # 16번과 동일하다고 언급됨
+
+# Step 24: 후행호기 HP, IP Drum 충수
+step_tags[23] = []  # 17번과 동일하다고 언급됨
+
+# Step 25: 후행호기 GT TCA Cooler Feed WTR 공급
+step_tags[24] = []  # 17번과 동일하다고 언급됨
+
+# Step 26: MCWP 2번째 기동
+step_tags[25] = [
+    'MOV-01-3706A-OF', 'MOV-01-3706A-CF', 'MOV-01-3706A-F', 'MOV-01-3706A-RP',
+    'MOV-01-3706A-AMOD', 'MOV-01-3706A-RI', 'MOV-01-3706B-OF', 'MOV-01-3706B-CF',
+    'MOV-01-3706B-F', 'MOV-01-3706B-RP', 'MOV-01-3706B-AMOD', 'MOV-01-3706B-RI',
+    'MOV-01-3707A-OF', 'MOV-01-3707A-CF', 'MOV-01-3707A-F', 'MOV-01-3707A-RP',
+    'MOV-01-3707A-AMOD', 'MOV-01-3707B-OF', 'MOV-01-3707B-CF', 'MOV-01-3707B-F',
+    'MOV-01-3707B-RP', 'MOV-01-3707B-AMOD'
+]
+
+# Step 27: HP By-pass PCV-3011 Auto 전환
+step_tags[26] = [
+    'PCV-H1-3011-ZT', 'PCV-H1-3011-DMD', 'PCV-H1-3011-AUTO', 'PCV-H2-3011-ZT',
+    'PCV-H2-3011-DMD', 'PCV-H2-3011-AUTO', 'PCV-H3-3011-ZT', 'PCV-H3-3011-DMD',
+    'PCV-H3-3011-AUTO'
+]
+
+# Step 28: 선행호기 GT 2대 기동
+step_tags[27] = [
+    '31R-DOGT263_01E', '32R-DOGT263_01E', '33R-DOGT263_01E', '31RCDOGT259_02',
+    '32RCDOGT259_02', '33RCDOGT259_02'
+]
+
+# Step 29: 선행호기 GT 점화
+step_tags[28] = [
+    'MOV-H1-4112-AMOD', 'MOV-H1-4115-AMOD', 'MOV-H1-3042-AMOD', 'MOV-H1-3043-AMOD',
+    'MOV-H2-4112-AMOD', 'MOV-H2-4115-AMOD', 'MOV-H2-3042-AMOD', 'MOV-H2-3043-AMOD',
+    'MOV-H3-4112-AMOD', 'MOV-H3-4115-AMOD', 'MOV-H3-3042-AMOD', 'MOV-H3-3043-AMOD',
+    '31RCAOGI011_05', '32RCAOGI011_05', '33RCAOGI011_05', 'P01-1126-01',
+    'P02-1126-01', 'P03-1126-01', 'PP-H1-61-RF', 'PP-H1-61-F', 'PP-H1-61-AMOD',
+    'PP-H1-61-RDY', 'PP-H1-62-RF', 'PP-H1-62-F', 'PP-H1-62-AMOD', 'PP-H1-62-RDY',
+    'PP-H2-61-RF', 'PP-H2-61-F', 'PP-H2-61-AMOD', 'PP-H2-61-RDY', 'PP-H2-62-RF',
+    'PP-H2-62-F', 'PP-H2-62-AMOD', 'PP-H2-62-RDY', 'PP-H3-61-RF', 'PP-H3-61-F',
+    'PP-H3-61-AMOD', 'PP-H3-61-RDY', 'PP-H3-62-RF', 'PP-H3-62-F', 'PP-H3-62-AMOD',
+    'PP-H3-62-RDY'
+]
+
+# Step 30: 선행호기 GT 계통연결
+step_tags[29] = [
+    '31RCDOGT051_05', '32RCDOGT051_05', '33RCDOGT051_05', '31R-AOGC002_01',
+    '32R-AOGC002_01', '33R-AOGC002_01'
+]
+
+# Step 31: ST AOP 기동
+step_tags[30] = [
+    '10RCDOTGOPC001_01', '10R-DOA011_02', '10RCDOTGOPC001_05', '10R-DOA021_02',
+    'TCV-S1-3703-ZT', 'TCV-S1-3703-CT', 'TIT-S1-3526'
+]
+
+# Step 32: Seal STM 전환
+step_tags[31] = [
+    'MOV-01-3403-OF', 'MOV-01-3403-CF', 'MOV-01-3403-F', 'MOV-01-3403-RP',
+    'MOV-01-3403-AMOD', 'MOV-01-3403-RP', 'PCV-01-3411-ZT', 'PCV-01-3411-DMD',
+    'PCV-01-3411-AUTO', 'PCV-01-3411-SP'
+]
+
+# Step 33: Cooling Tower Fan Low Speed 기동
+step_tags[32] = [
+    'CTF-01-01A-6PF', 'CTF-01-01B-6PF', 'CTF-01-01C-6PF', 'CTF-01-01D-6PF',
+    'CTF-01-01E-6PF', 'CTF-01-01F-6PF', 'CTF-01-01G-6PF', 'CTF-01-02A-6PF',
+    'CTF-01-02B-6PF', 'CTF-01-02C-6PF', 'CTF-01-02D-6PF', 'CTF-01-02E-6PF',
+    'CTF-01-02F-6PF', 'CTF-01-02G-6PF', 'CTF-01-01A-4PF', 'CTF-01-01B-4PF',
+    'CTF-01-01C-4PF', 'CTF-01-01D-4PF', 'CTF-01-01E-4PF', 'CTF-01-01F-4PF',
+    'CTF-01-01G-4PF', 'CTF-01-02A-4PF', 'CTF-01-02B-4PF', 'CTF-01-02C-4PF',
+    'CTF-01-02D-4PF', 'CTF-01-02E-4PF', 'CTF-01-02F-4PF', 'CTF-01-02G-4PF'
+]
+
+# Step 34: 후행호기 GT 기동
+step_tags[33] = []  # 별도의 TAG가 명시되지 않음
+
+# Step 35: Lead 호기 MOV-3012A/B Open 확인
+step_tags[34] = [
+    'TIT-H1-4124-SEL', 'TIT-H2-4124-SEL', 'TIT-H3-4124-SEL', '10R-AOSE451_02',
+    'MOV-H1-3012A-OF', 'MOV-H1-3012A-AMOD', 'MOV-H1-3012B-OF', 'MOV-H1-3012B-AMOD',
+    'MOV-H2-3012A-OF', 'MOV-H2-3012A-AMOD', 'MOV-H2-3012B-OF', 'MOV-H2-3012B-AMOD',
+    'MOV-H3-3012A-OF', 'MOV-H3-3012A-AMOD', 'MOV-H3-3012B-OF', 'MOV-H3-3012B-AMOD'
+]
+
+# Step 36: HP STM Drain MOV Close
+step_tags[35] = [
+    'MOV-S1-3044-OF', 'MOV-S1-3044-CF', 'MOV-S1-3044-F', 'MOV-S1-3044-RP',
+    'MOV-S1-3044-AMOD', 'MOV-S1-3045-OF', 'MOV-S1-3045-CF', 'MOV-S1-3045-F',
+    'MOV-S1-3045-RP', 'MOV-S1-3045-AMOD', 'MOV-S1-3046-OF', 'MOV-S1-3046-CF',
+    'MOV-S1-3046-F', 'MOV-S1-3046-RP', 'MOV-S1-3047-OF', 'MOV-S1-3047-CF',
+    'MOV-S1-3047-F', 'MOV-S1-3047-RP'
+]
+
+# Step 37: 후행호기 GT 점화 후
+step_tags[36] = []  # 별도의 TAG가 명시되지 않음
+
+# Step 38: 후행호기 GT 계통연결
+step_tags[37] = []  # 별도의 TAG가 명시되지 않음
+
+# Step 39: MCWP 3번째 기동
+step_tags[38] = []  # 별도의 TAG가 명시되지 않음
+
+# Step 40: HP STM Drain Vv Close
+step_tags[39] = [
+    '10RCDOTGOPC001_20', '10RCDOTGOPC001_19', '10RCDOTGOPC001_31', '10RCDOTGOPC001_32',
+    '10RCDOTGOPC001_37', '10RCDOTGOPC001_38', '10RCDOTGOPC001_25', '10RCDOTGOPC001_26',
+    '10RCDOTGOPC002_29', '10RCDOTGOPC002_30', '10RCDOTGOPC002_35', '10RCDOTGOPC002_36',
+    '10RCDOTGOPC003_03', '10RCDOTGOPC003_04', '10RCDOTGOPC002_05', '10RCDOTGOPC002_06',
+    '10RCDOTGOPC002_11', '10RCDOTGOPC002_12', '10RCDOTGOPC002_17', '10RCDOTGOPC002_18',
+    '10RCDOTGOPC002_23', '10RCDOTGOPC002_24'
+]
+
+# Step 41: ST STM OK
+step_tags[40] = [
+    'TIT-S1-3001-SHT', '10R-AOSE451_02', '10R-AOSE451_04', 'TIT-S1-3201-SHT',
+    '10R-AOSE451_05', '10R-AOSE451_06', 'TIT-S1-3301-SHT', '10R-AOSE451_07',
+    '10R-AOSE451_08', '10RCDOOUT2_11', '10RCDOOUT2_10', '10RCDOOUT2_09',
+    '10RCAOOUT1_14', '10RCAOOUT1_16', '10RCAOSE18_01', '10RCAOTGSE19_05',
+    '10RCAOTGSE19_06', '10RCAOSE21_02', '10RCAOTGSE21_01', '10RCAOTGSE21_02'
+]
+
+# Step 42: ST TBN Reset
+step_tags[41] = [
+    '10RCDOOUT2_02', '10RCDOOUT2_01'
+]
+
+# Step 43: ST Rolling
+step_tags[42] = [
+    '10RCAOTT07_04', '10RCAOTT07_03', '10RCAOTT08_02', '10RCAOTT08_01',
+    '10RCAOTT08_03', '10RCAOTT07_02', '10RCAOTT07_01', '10RCDOOUT7_07',
+    '10RCDOOUT7_09', '10RCDOOUT8_07', '10RCDOOUT5_06', '10RCDOOUT5_05',
+    '10RCDOOUT5_04', '10RCDOOUT5_01', '10RCDOOUT5_02', '10RCDOOUT5_03',
+    '10RCDOOUT3_01', '10RCAOSE01A_01', '10RCAOOUT1_03', '10RCDOOUT5_07',
+    '10RCDOOUT5_08', '10RCAOTB06_01', '10RCDOOUT9_18', '10RCDOOUT9_19',
+    '10RCDOOUT3_05', '10RCDOOUT9_09'
+]
+
+# Step 44: Valve Transfer
+step_tags[43] = []  # 별도의 TAG가 명시되지 않음
+
+# Step 45: ST 계통연결
+step_tags[44] = [
+    '10RCDOCIF12_03', '10RCDOOUT2_08', '10RCDOOUT2_03', '10RCAOOPC101_01',
+    '10RCDOCIF14_01', '10RCDOCIF14_02', '10RCDOCIF14_03'
+]
+
+# Step 46: LP Control Vv 'On'
+step_tags[45] = [
+    '10RCDOOUT6_01', '10RCDOOUT6_02', '10RCDOOUT5_10', '10RCDOOUT5_11',
+    'P01-1146-01', 'PCV-H1-3311-PRSCTRL', 'PCV-H1-3311-BAKPR', 'P02-1146-01',
+    'PCV-H2-3311-PRSCTRL', 'PCV-H2-3311-BAKPR', 'P03-1146-01', 'PCV-H3-3311-PRSCTRL',
+    'PCV-H3-3311-BAKPR', 'PCV-H1-3311-CF', 'PCV-H2-3311-CF', 'PCV-H3-3311-CF'
+]
+
+# Step 47: HIP Control Valve 'On'
+step_tags[46] = [
+    'P01-1126-01', 'PCV-H1-3211-PRSCTRL', 'PCV-H1-3211-BAKPR', 'PCV-H1-3211-CF',
+    'P02-1126-01', 'PCV-H2-3211-PRSCTRL', 'PCV-H2-3211-BAKPR', 'PCV-H2-3211-CF',
+    'P03-1126-01', 'PCV-H3-3211-PRSCTRL', 'PCV-H3-3211-BAKPR', 'PCV-H3-3211-CF',
+    'P01-104-01', 'PCV-H1-3011-PRSCTRL', 'PCV-H1-3011-BAKPR', 'PCV-H1-3011-CF',
+    'P02-104-01', 'PCV-H2-3011-PRSCTRL', 'PCV-H2-3011-BAKPR', 'PCV-H2-3011-CF',
+    'P03-104-01', 'PCV-H3-3011-PRSCTRL', 'PCV-H3-3011-BAKPR', 'PCV-H3-3011-CF',
+    '10RCDOOUT5_10', '10RCDOOUT5_11'
+]
+
+# Step 48: CCW Tk LVL 확인
+step_tags[47] = [
+    'LIT-01-3703-SEL', 'MOV-01-3714A-OF', 'MOV-01-3714A-CF', 'MOV-01-3714A-F',
+    'MOV-01-3714A-RP', 'MOV-01-3714A-AMOD', 'MOV-01-3714A-RDY', 'MOV-01-3714B-OF',
+    'MOV-01-3714B-CF', 'MOV-01-3714B-F', 'MOV-01-3714B-RP', 'MOV-01-3714B-AMOD',
+    'MOV-01-3714B-RDY'
+]
+
+# Step 49: Cooling Tower Fan 'High Speed' 전환
+step_tags[48] = []  # 별도의 TAG가 명시되지 않음
+
+# Step 50: ST 출력 증발
+step_tags[49] = []  # 별도의 TAG가 명시되지 않음
+
+# Step 51: Tie(3:1) 완료 후 Vacuum Pp Dis. MOV Auto 전환
+step_tags[50] = [
+    'MOV-01-3715-OF', 'MOV-01-3715-CF', 'MOV-01-3715-F', 'MOV-01-3715-RP',
+    'MOV-01-3715-AMOD', 'MOV-01-3715-RDY'
+]
+
+
+target_tags = step_tags[11]
+print(f"총 {len(target_tags)}개의 대상 태그가 설정되었습니다.")
